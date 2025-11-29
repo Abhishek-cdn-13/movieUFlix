@@ -1,68 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uflix</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <main>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uflix</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="indexResponsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Borel&family=Fascinate&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <main>
 
 
-      <section class="sidebar">
-        <div class="logo"><h1>uFLIX</h1></div>
-        <div class="tabs flex">
-          <div class="new-tabs flex">
-            <span>🎯New</span>
-            <span>🎬Movies</span>
-            <span>📺Series</span>
-          </div>
-          <div class="halloween flex">
-            <span>🎃Halloween Movies</span>
-          </div>
-          <div class="trending flex">
-            <span>📈Trending movies</span>
-            <span>📈Trending series</span>
-          </div>
-          <div class="req-contact flex">
-            <span>↑↓ Request</span>
-            <span>📑Contact</span>
-          </div>
+    <section class="sidebar">
+      <div class="res_nav">
+        <i class="fa-solid fa-bars hamburger"></i>
+        <div class="res-logo">
+          <h1>uFLIX</h1>
         </div>
-      </section>
+        <i class="fa-solid fa-magnifying-glass serachIcon"></i>
+      </div>
+      <div class="res_tabs tabs flex">
+        <div class="new-tabs flex">
+          <span>🎯New</span>
+          <span>🎬Movies</span>
+          <span>📺Series</span>
+        </div>
+        <div class="halloween flex">
+          <span>🎃Halloween Movies</span>
+        </div>
+        <div class="trending flex">
+          <span>📈Trending movies</span>
+          <span>📈Trending series</span>
+        </div>
+        <div class="req-contact flex">
+          <span>↑↓ Request</span>
+          <span>📑Contact</span>
+          <span><input type="search" name="search" class="res_search search" placeholder="Search ..."></span>
+        </div>
+      </div>
+
+      <div class="logo">
+        <h1>uFLIX</h1>
+      </div>
+      <div class="tabs flex">
+        <div class="new-tabs flex">
+          <span>🎯New</span>
+          <span>🎬Movies</span>
+          <span>📺Series</span>
+        </div>
+        <div class="halloween flex">
+          <span>🎃Halloween Movies</span>
+        </div>
+        <div class="trending flex">
+          <span>📈Trending movies</span>
+          <span>📈Trending series</span>
+        </div>
+        <div class="req-contact flex">
+          <span>↑↓ Request</span>
+          <span>📑Contact</span>
+        </div>
+      </div>
+    </section>
 
 
-      <section class="main-container">
-        <div class="search-login">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="Search..."
-          />
-          <div class="login-profile"></div>
+    <section class="main-container">
+      <div class="search-login">
+        <input type="search" name="search" class="search" placeholder="Search..." />
+        <div class="login-profile"></div>
+      </div>
+      <div class="movie-info-box">
+        <h2>Movies</h2>
+        <div class="movie-info">
+          <span>Genre<i class="fa-solid fa-align-left"></i></span>
+          <span>Release date<i class="fa-solid fa-align-left"></i></span>
+          <span>Rating<i class="fa-solid fa-align-left"></i></span>
+          <span class="active">Sorting (Newest)<i class="fa-solid fa-align-left"></i></span>
+          <span>Language<i class="fa-solid fa-align-left"></i></span>
         </div>
-        <div class="movie-info-box">
-          <h2>Movies</h2>
-          <div class="movie-info">
-            <span>Genre≡</span>
-            <span>Release date≡</span>
-            <span>Rating≡</span>
-            <span class="active">Sorting (Newest)≡</span>
-            <span>Language≡</span>
-          </div>
-        </div>
-        <div class="movie-grid" id="movieGrid"></div>
-      </section>
-    </main>
-    <script src="script.js"></script>
-  </body>
+      </div>
+      <div class="movie-grid" id="movieGrid"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
 </html>

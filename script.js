@@ -1,9 +1,16 @@
 const grid = document.querySelector("#movieGrid");
 const API_KEY = "7b7e43db815082715b238d674a499785";
 const logo = document.querySelector(".logo");
+const hamburger = document.querySelector(".hamburger");
+const resTabs = document.querySelector(".res_tabs");
+const resLogo = document.querySelector(".res-logo");
+const search = document.querySelector(".serachIcon");
 
-logo.addEventListener("click", ()=>{
-  window.location.href="index.html";
+logo.addEventListener("click", () => {
+  window.location.href = "index.html";
+})
+resLogo.addEventListener("click", () => {
+  window.location.href = "index.html";
 })
 
 async function loadMovies() {
@@ -25,7 +32,7 @@ function displayMovies(movies) {
             </div>
             <div class="movie-details">
                 <span>${movie.vote_average.toFixed(1)}</span>
-                <span>${movie.release_date.substring(0,4)}</span>
+                <span>${movie.release_date.substring(0, 4)}</span>
                 <div class="movie-name">${movie.title}</div>
             </div>
         </div>`;
@@ -34,25 +41,28 @@ function displayMovies(movies) {
 };
 loadMovies();
 
-function watchMovie(){
-  document.querySelectorAll(".movie-card").forEach((card)=>{
-    card.addEventListener("click", ()=>{
+function watchMovie() {
+  document.querySelectorAll(".movie-card").forEach((card) => {
+    card.addEventListener("click", () => {
       let id = card.getAttribute("data-id");
-      window.location.href=`movie.html?id=${id}`;
+      window.location.href = `movie.html?id=${id}`;
     })
   })
 }
 
-document.querySelector("#search").addEventListener("keydown", function(e){
-  if(e.key==="Enter"){
-     let query = this.value.trim();
+document.querySelectorAll(".search").forEach((s)=>{
+  s.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      console.log("hello");
+      let query = this.value.trim();
 
-  if(query.length > 2){
-    searchMovies(query);
-  } else if(query.length === 0){
-    loadMovies(); // reset to popular
-  }
-  }
+      if (query.length > 2) {
+        searchMovies(query);
+      } else if (query.length === 0) {
+        loadMovies(); // reset to popular
+      }
+    }
+  })
 });
 
 
@@ -62,4 +72,27 @@ async function searchMovies(query) {
   displayMovies(data.results);
 }
 
+let flag = 0;
+
+hamburger.addEventListener("click", () => {
+  if (flag === 0) {
+    resTabs.style.height = "100%";
+    flag = 1;
+  }
+  else {
+    resTabs.style.height = "0";
+    flag = 0;
+  }
+})
+
+search.addEventListener("click", () => {
+  if (flag === 0) {
+    resTabs.style.height = "100%";
+    flag = 1;
+  }
+  else {
+    resTabs.style.height = "0";
+    flag = 0;
+  }
+})
 
