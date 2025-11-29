@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uflix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="movie.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+
+
+      <section class="sidebar">
+        <div class="logo"><h1>uFLIX</h1></div>
+        <div class="tabs flex">
+          <div class="new-tabs flex">
+            <span>🎯New</span>
+            <span>🎬Movies</span>
+            <span>📺Series</span>
+          </div>
+          <div class="halloween flex">
+            <span>🎃Halloween Movies</span>
+          </div>
+          <div class="trending flex">
+            <span>📈Trending movies</span>
+            <span>📈Trending series</span>
+          </div>
+          <div class="req-contact flex">
+            <span>↑↓ Request</span>
+            <span>📑Contact</span>
+          </div>
+        </div>
+      </section>
+
+
+
+      <section class="main-container">
+        <div class="search-login">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search..."
+          />
+          <div class="login-profile"></div>
+        </div>
+        <div class="movie-poster">
+          
+        </div>
+        <div class="similar-movie-grid" id="Sim-movieGrid"></div>
+      </section>
+    </main>
+    <script src="movie.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
