@@ -79,6 +79,7 @@ main {
 .movie-info {
   color: #9d9daa;
   display: flex;
+  align-items: center;
   gap: 1rem;
   width: 100%;
 }
@@ -96,8 +97,22 @@ main {
   border-radius: 50%;
   background-image: url("https://images.unsplash.com/photo-1511367461989-f85a21fda167?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-position: center center;
+  object-fit: cover;
   background-size: cover;
+  cursor: pointer;
 }
+
+/* 
+.login-profile {
+  border: none !important;
+  background: none !important;
+}
+.login-profile img,
+#user-button {
+  border-radius: 50%;
+} */
+
+
 
 .movie-grid {
   width: 100%;
@@ -166,5 +181,9 @@ main {
   align-items: center;
 }
 .res_tabs,.res_nav{
+  display: none;
+}
+
+.res_login{
   display: none;
 }
